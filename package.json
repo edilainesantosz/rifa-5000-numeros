@@ -1,0 +1,49 @@
+{
+  "name": "rifa-gen",
+  "author": "jefersonla",
+  "version": "0.2.0",
+  "private": true,
+  "license": "MIT",
+  "description": "TypeScript app with parcel bundler.",
+  "main": "lib/index.js",
+  "homepage": "https://jefersonla.github.io/rifa-typescript-app/",
+  "scripts": {
+    "start": "parcel serve index.html --open",
+    "build": "cross-env NODE_ENV=production parcel build index.html --public-url .",
+    "watch": "parcel watch index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jefersonla/rifa-typescript-app.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jefersonla/rifa-typescript-app/issues"
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "src/"
+  ],
+  "dependencies": {
+    "@parcel/fs": "1.11.0",
+    "@salesforce-ux/design-system": "^2.9.4",
+    "animate.css": "^3.7.2",
+    "blob-stream": "0.1.3",
+    "lodash": "4.17.15",
+    "pdfkit": "0.10.0",
+    "rxjs": "6.5.2",
+    "svg-to-pdfkit": "0.1.7"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.14.136",
+    "@types/pdfkit": "0.10.0",
+    "@types/blob-stream": "0.1.29",
+    "@types/node": "12.6.8",
+    "cross-env": "5.2.0",
+    "gh-pages": "2.0.1",
+    "parcel-bundler": "1.12.3",
+    "typescript": "3.5.3"
+  }
+}
